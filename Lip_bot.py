@@ -1,15 +1,11 @@
 # pip install  - pytelegrambotapi   - requests
-
 import telebot
 import requests
 
 """API запрос"""
 def btc_search():
-    # API запрос цены биткоина
     url_btc = 'https://kuna.io/api/v2/tickers/btcuah'
     btc_reply = requests.get(url_btc)
-    #if btc_reply.status_code == 200:
-    #    print('Btc загружен')
     # Сохранение ответа
     btc_dict = btc_reply.json()
     # Обработка     Нужные данные в словаре "ticker"
